@@ -1,0 +1,55 @@
+"*":
+  "bracket-matcher":
+    autocompleteCharacters: [
+      "()"
+      "[]"
+      "{}"
+      "``"
+      "“”"
+      "‘’"
+      "«»"
+      "‹›"
+    ]
+  core:
+    disabledPackages: [
+      "python-debugger"
+      "python-tools"
+      "python-indent"
+      "open-on-github"
+      "metrics"
+      "welcome"
+    ]
+    telemetryConsent: "no"
+  editor:
+    fontSize: 15
+    preferredLineLength: 120
+    tabLength: 4
+  "exception-reporting":
+    userId: "64f95e57-e685-45fd-9fa5-6241b464fc15"
+  "find-and-replace":
+    closeFindPanelAfterSearch: true
+  "linter-ui-default": {}
+  minimap:
+    displayMinimapOnLeft: true
+    plugins:
+      codeglance: true
+      codeglanceDecorationsZIndex: 0
+      cursorline: true
+      cursorlineDecorationsZIndex: 0
+      "git-diff": true
+      "git-diffDecorationsZIndex": 0
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
+      selection: true
+      selectionDecorationsZIndex: 0
+  "minimap-codeglance":
+    codeHighlighting: false
+    decorations: false
+    numberOfLines: 12
+  tabs:
+    addNewTabsAtEnd: true
+  "tree-view":
+    alwaysOpenExisting: true
+    autoReveal: true
+  welcome:
+    showOnStartup: false
