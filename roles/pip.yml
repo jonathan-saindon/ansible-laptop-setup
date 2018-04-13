@@ -1,0 +1,41 @@
+# Install and configure pip packages
+
+- name: install pip numpy
+  pip:
+    name: numpy
+
+- name: install pip matplotlib
+  pip:
+    name: matplotlib
+
+- name: install pip pymongo
+  pip:
+    name: pymongo
+
+- name: install pip opencv-python
+  pip:
+    name: opencv
+
+- name: install pip opencv-contrib-python
+  pip:
+    name: opencv-contrib
+
+- name: install pip functools32
+  pip:
+    name: functools32
+
+- name: install pip flask
+  pip:
+    name: flask
+
+- name: install pip jsonschema
+  pip:
+    name: jsonschema
+
+- name: install pip redis
+  pip:
+    name: redis
+
+- name: install pip requests
+  pip:
+    name: requests
