@@ -1,0 +1,12 @@
+################################################################################
+# ANSIBLE configuration file to setup workstation softwares and configurations #
+################################################################################
+
+---
+- hosts: all
+  sudo: yes
+  vars_files:
+    - vars.yml
+
+  tasks:
+    - include: roles/apps.yml tags=apps
