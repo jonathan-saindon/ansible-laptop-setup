@@ -1,0 +1,16 @@
+# Install and configure pip3 packages
+
+- name: Install pip3 libraries
+  pip3: name={{ item }}
+  become: yes
+  with_items:
+    - flask
+    - functools32
+    - jsonschema
+    - matplotlib
+    - numpy
+    - opencv
+    - opencv-contrib
+    - pymongo
+    - redids
+    - requests
