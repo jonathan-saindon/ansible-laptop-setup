@@ -1,1 +1,13 @@
 user_home: /home/$user
+ansible_connection: local
+aptcachetime: 3600
+ssh:
+  start: true
+  service_enabled: true
+  password_auth: false
+  root_login: false
+atom:
+  install_path: .atom/
+  config:
+    origin: config.cson
+    dest: .atom/config.cson

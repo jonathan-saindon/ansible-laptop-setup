@@ -3,10 +3,13 @@
 ################################################################################
 
 ---
-- hosts: all
-  sudo: yes
+- hosts: local
+  connection: local
+  become: yes
   vars_files:
     - vars.yml
 
   tasks:
-    - include: roles/apps.yml tags=apps
+    - include: roles/system.yml
+    - include: roles/apps.yml
+    - include: roles/pip.yml

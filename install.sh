@@ -1,11 +1,5 @@
 #!/bin/bash
 
-#################
-# Update Ubuntu #
-#################
-sudo apt-get update
-sudo apt-get upgrade
-
 ###################
 # Install ansible #
 ###################
@@ -21,4 +15,7 @@ else
     echo "Ansible already installed"
 fi
 
-ansible-playbook setup.yml
+################
+# Run playbook #
+################
+ansible-playbook playbook.yml
