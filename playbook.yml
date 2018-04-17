@@ -9,7 +9,6 @@
   vars_files:
     - vars.yml
 
-  tasks:
-    - include: roles/system.yml
-    - include: roles/apps.yml
-    - include: roles/pip.yml
+  roles:
+    - role: system
+    - role: apps
