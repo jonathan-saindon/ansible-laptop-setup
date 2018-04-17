@@ -1,0 +1,26 @@
+# Install and configure python packages and pip libraries
+
+- name: Install python packages
+  apt: pkg={{ item }} state=latest update_cache=yes cache_valid_time={{ aptcachetime }}
+  with_items:
+    - python
+    - python-pip
+    - python-dev
+    - python3
+    - python3-pip
+    - python3-dev
+
+- name: Install pip3 libraries
+  pip3: name={{ item }}
+  become: yes
+  with_items:
+    - flask
+    - functools32
+    - jsonschema
+    - matplotlib
+    - numpy
+    - opencv
+    - opencv-contrib
+    - pymongo
+    - redids
+    - requests
