@@ -1,0 +1,13 @@
+---
+- name: Install pip libraries
+  action: "pip {{ item }}"
+  become: yes
+  with_items:
+    - { name: flask }
+    - { name: jsonschema }
+    - { name: matplotlib }
+    - { name: numpy }
+    - { name: opencv-contrib-python }
+    - { name: pymongo }
+    - { name: redis }
+    - { name: requests }

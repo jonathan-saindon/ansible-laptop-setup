@@ -1,3 +1,4 @@
+---
 - name: Add Atom repository (Webupd8team)
   apt_repository: repo="ppa:webupd8team/atom" state=present
 

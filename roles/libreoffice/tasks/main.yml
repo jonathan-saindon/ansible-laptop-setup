@@ -1,5 +1,4 @@
 ---
-
 - name: Add LibreOffice repository
   apt_repository: repo="ppa:libreoffice/libreoffice-5-1" state=present
 

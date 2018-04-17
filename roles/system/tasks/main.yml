@@ -1,5 +1,4 @@
-# Update and upgrade system
-
+---
 - name: Update repositories cache
   apt:
     update_cache: yes

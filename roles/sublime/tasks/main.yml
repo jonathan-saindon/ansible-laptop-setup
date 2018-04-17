@@ -1,5 +1,4 @@
 ---
-
 - name: Add sublime repository
   apt_repository: repo="ppa:webupd8team/sublime-text-3" state=present
 

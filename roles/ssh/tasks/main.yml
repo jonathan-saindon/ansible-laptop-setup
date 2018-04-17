@@ -1,5 +1,4 @@
 ---
-
 - name: Install SSH Server
   apt: pkg=openssh-server state=latest cache_valid_time={{ aptcachetime }}
 

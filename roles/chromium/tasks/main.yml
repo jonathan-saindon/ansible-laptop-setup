@@ -1,0 +1,10 @@
+---
+- name: Install Chromium
+  apt:
+    name: chromium-browser
+    state: latest
+    update_cache: yes
+    cache_valid_time: "{{ aptcachetime }}"
+
+- name: Set Chromium as default browser
+  command: update-alternatives --install /usr/bin/x-www-browser x-www-browser /usr/bin/chromium-browser 250

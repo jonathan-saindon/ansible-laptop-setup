@@ -1,0 +1,30 @@
+---
+- name: Install git
+  package:
+    name: git
+    state: latest
+
+- name: Install nano
+  package:
+    name: nano
+    state: latest
+
+- name: Install python-opencv
+  package:
+    name: python-opencv
+    state: latest
+
+- name: Install Firefox
+  package:
+    name: firefox
+    state: latest
+
+- name: Install Filezilla
+  package:
+    name: filezilla
+    state: latest
+
+- name: Install Slack
+  package:
+    name: slack
+    state: latest
