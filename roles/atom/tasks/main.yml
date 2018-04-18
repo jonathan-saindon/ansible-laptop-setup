@@ -1,9 +1,9 @@
 ---
 - name: Add Atom repository (Webupd8team)
-    apt_repository: repo="ppa:webupd8team/atom" state=present
+  apt_repository: repo="ppa:webupd8team/atom" state=present
 
 - name: Install Atom text editor
-    apt: name=atom state=present update_cache=yes
+  apt: name=atom state=present update_cache=yes
 
 - template:
     src: "../templates/{{ atom.config.filename }}"
@@ -13,6 +13,4 @@
     mode: 0664
 
 - name: Install Atom packages
-    become: yes
-    become_method: su
-    command: sudo apm install --packages-file {{ atom.packages.path }}
+  command: sudo apm install --packages-file {{ atom.packages.path }}

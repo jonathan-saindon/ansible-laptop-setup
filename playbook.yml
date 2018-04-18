@@ -10,12 +10,13 @@
     - vars.yml
 
   roles:
-    - role: system
-    - role: python
-    - role: pip
-    - role: apps
-    - role: ssh
-    - role: chromium
-    - role: libreoffice
-    - role: nodejs
-    - role: sublime
+    #- role: system
+    #- role: python
+    #- role: pip
+    #- role: apps
+    #- role: ssh
+    - role: atom
+    #- role: chromium
+    #- role: libreoffice
+    #- role: nodejs
+    #- role: sublime

@@ -9,10 +9,9 @@ if ! grep -q "ansible/ansible" /etc/apt/sources.list /etc/apt/sources.list.d/*; 
 fi
 
 if ! hash ansible >/dev/null 2>&1; then
+    echo "Ansible installation not found !"
     echo "Installing Ansible..."
     sudo apt-get install ansible -y
-else
-    echo "Ansible already installed"
 fi
 
 ################
