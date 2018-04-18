@@ -9,11 +9,6 @@
     name: nano
     state: latest
 
-- name: Install python-opencv
-  package:
-    name: python-opencv
-    state: latest
-
 - name: Install Firefox
   package:
     name: firefox

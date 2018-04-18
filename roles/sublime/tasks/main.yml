@@ -13,6 +13,3 @@
 
 - name: Install Package Control for sublime
   get_url: url="https://packagecontrol.io/Package%20Control.sublime-package" dest="{{ ansible_env.HOME }}/.config/sublime-text-3/Installed Packages/Package Control.sublime-package"
-
-- name: Copy Package Control settings template for auto-install (REMEMBER TO RUN DOTFILES SYMLINKS FOR REAL AUTO INSTALL PACKAGES)
-  copy: src="Package Control.sublime-settings" dest="{{ ansible_env.HOME }}/.config/sublime-text-3/Packages/User/Package Control.sublime-settings" owner="{{ ansible_env.USER }}" group="{{ ansible_env.USER }}"
