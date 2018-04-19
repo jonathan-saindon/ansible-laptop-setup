@@ -3,15 +3,26 @@
   command: "pip3 install --upgrade pip"
   become: yes
 
-- name: Install pip libraries
-  command: "pip3 {{ item }}"
-  become: yes
-  with_items:
-    - { name: flask }
-    - { name: jsonschema }
-    - { name: matplotlib }
-    - { name: numpy }
-    - { name: opencv-contrib-python }
-    - { name: pymongo }
-    - { name: redis }
-    - { name: requests }
+- pip: Install flask python lib
+  name: flask
+
+- pip: Install jsonschema python lib
+  name: jsonschema
+
+- pip: Install matplotlib python lib
+  name: matplotlib
+
+- pip: Install numpy python lib
+  name: numpy
+
+- pip: Install opencv python lib
+  name: opencv-contrib-python
+
+- pip: Install pymongo python lib
+  name: pymongo
+
+- pip: Install redis python lib
+  name: redis
+
+- pip: Install requests python lib
+  name: requests
