@@ -1,6 +1,10 @@
 ---
+- name: Upgrade pip
+  command: "pip3 install --upgrade pip"
+  become: yes
+
 - name: Install pip libraries
-  action: "pip {{ item }}"
+  command: "pip3 {{ item }}"
   become: yes
   with_items:
     - { name: flask }
