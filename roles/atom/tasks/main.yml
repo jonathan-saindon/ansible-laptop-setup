@@ -6,8 +6,8 @@
   apt: name=atom state=present update_cache=yes
 
 - template:
-    src: "../templates/{{ atom.config.filename }}"
-    dest: "{{ atom.config.path }}"
+    src: "{{ atom.config.src }}"
+    dest: "{{ atom.config.dest }}"
     owner: "{{ user.name }}"
     group: "{{ user.name }}"
     mode: 0664

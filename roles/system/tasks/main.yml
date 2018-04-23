@@ -6,3 +6,13 @@
 - name: Update all packages to the latest version
   apt:
     upgrade: dist
+
+- template:
+  src: "{{ bash.profile.src }}"
+  dest: "{{ bash.profile.dest }}"
+  owner: "{{ user.name }}"
+  group: "{{ user.name }}"
+  mode: 0644
+
+- name: Reload bash_profile
+  command: "source {{ bash.profile.dest }}"

@@ -1,3 +1,7 @@
+# Install apps
+#
+# This role should be eliminated whenever one of these apps require more than one task
+
 ---
 - name: Install git
   package:
