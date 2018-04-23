@@ -1,3 +1,6 @@
 [submodule "conf/env"]
 	path = conf/env
 	url = https://gist.github.com/jonathan-saindon/13535054d14e2c54af3b919a4f18924f
+[submodule "conf/atom"]
+	path = conf/atom
+	url = https://gist.github.com/jonathan-saindon/a035807fc79ee36c02658c8cf5ea0c24
