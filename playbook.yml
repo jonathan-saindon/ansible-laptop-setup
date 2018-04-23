@@ -11,10 +11,11 @@
 
   roles:
     - role: system
+    - role: ssh
+    - role: git
     - role: python
     - role: pip
     - role: apps
-    - role: ssh
     - role: atom
     - role: chromium
     - role: libreoffice
