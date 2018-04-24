@@ -5,4 +5,4 @@ Workstation software and configurations
 Comment or uncomment roles that you don't want to run in the playbook
 
 ## Installation
-run ./install.sh
+Run ```./install.sh``` to launch the playbook installation
