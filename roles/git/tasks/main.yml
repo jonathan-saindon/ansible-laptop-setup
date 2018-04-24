@@ -6,3 +6,11 @@
 
 - name: Update submodules
   command: "git submodule update --init"
+
+- name: Restore gitconfig
+  copy:
+    src: "{{ git.config.src }}{{ git.config.filename }}"
+    dest: "{{ git.config.dest }}{{ git.config.filename }}"
+    owner: "{{ user.name }}"
+    group: "{{ user.name }}"
+    mode: 0664

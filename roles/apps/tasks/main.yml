@@ -3,22 +3,17 @@
 # This role should be eliminated whenever one of these apps require more than one task
 
 ---
-- name: Install nano
-  package:
-    name: nano
-    state: latest
+- name: Install system apps
+  apt: pkg={{ item }} state=latest
+  with_items:
+    - nano
+    - less
+    - htop
+    - tree
 
-- name: Install Firefox
-  package:
-    name: firefox
-    state: latest
-
-- name: Install Filezilla
-  package:
-    name: filezilla
-    state: latest
-
-- name: Install Slack
-  package:
-    name: slack
-    state: latest
+- name: Install other apps
+  apt: pkg={{ item }} state=latest
+  with_items:
+    - firefox
+    - filezilla
+    - slack
