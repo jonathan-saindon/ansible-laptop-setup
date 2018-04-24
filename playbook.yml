@@ -9,15 +9,19 @@
   vars_files:
     - vars.yml
 
+  # tasks:
+  #   - shell: sudo apt-get update -y
+  #   - shell: sudo apt-get dist-upgrade -y -v
+
   roles:
-    - role: system
+    - role: bash
     - role: ssh
     - role: git
     - role: python
-    - role: pip
     - role: apps
     - role: atom
     - role: chromium
     - role: libreoffice
     - role: nodejs
+    - role: pip
     - role: sublime

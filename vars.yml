@@ -4,16 +4,23 @@ aptcachetime: 3600
 
 atom:
   config:
-    src: "{{ conf.path }}/config.cson"
-    dest: "{{ user.home }}/.atom/config.cson"
+    filename: config.cson
+    src: "{{ conf.path }}/atom/"
+    dest: "{{ user.home }}/.atom/"
   packages:
     path: "{{ conf.path }}/atom/packages.txt"
 bash:
-  profile:
-    src: "{{ conf.path }}/env/bash_profile"
-    dest: "{{ user.home }}/.bash_profile"
+  aliases:
+    filename: .bash_aliases
+    src: "{{ conf.path }}/env/"
+    dest: "{{ user.home }}/"
 conf:
   path: "{{ playbook_dir }}/conf"
+git:
+  config:
+    filename: .gitconfig
+    src: "{{ conf.path }}/env/"
+    dest: "{{ user.home }}/"
 ssh:
   start: true
   service_enabled: true

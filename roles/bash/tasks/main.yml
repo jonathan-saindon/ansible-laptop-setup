@@ -1,0 +1,10 @@
+---
+- template:
+    src: "{{ bash.aliases.src }}{{ bash.aliases.filename }}"
+    dest: "{{ bash.aliases.dest }}{{ bash.aliases.filename }}"
+    owner: "{{ user.name }}"
+    group: "{{ user.name }}"
+    mode: 0644
+
+- name: Reload bash_profile
+  shell: ". {{ bash.aliases.dest }}{{ bash.aliases.filename }}"
