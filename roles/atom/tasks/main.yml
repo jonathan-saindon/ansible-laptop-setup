@@ -6,12 +6,12 @@
   apt: name=atom state=present update_cache=yes
 
 - template:
-  src: "{{ atom.config.src }}{{ atom.config.filename }}"
-  dest: "{{ atom.config.dest }}{{ atom.config.filename }}"
-  owner: "{{ user.name }}"
-  group: "{{ user.name }}"
-  mode: 0664
+    src: "{{ atom.config.src }}{{ atom.config.filename }}"
+    dest: "{{ atom.config.dest }}{{ atom.config.filename }}"
+    owner: "{{ user.name }}"
+    group: "{{ user.name }}"
+    mode: 0664
 
 - name: Install Atom packages
   become: yes
-  command: "apm install --packages-file {{ atom.packages.path }}"
+  command: "sudo apm install --packages-file {{ atom.packages.path }}"
