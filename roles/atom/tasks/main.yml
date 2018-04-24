@@ -5,6 +5,14 @@
 - name: Install Atom text editor
   apt: name=atom state=present update_cache=yes
 
+- name: Create ~/.atom directory
+  file:
+    path: "{{ atom.config.dest }}"
+    state: directory
+    owner: "{{ user.name }}"
+    group: "{{ user.name }}"
+    mode: 0775
+
 - template:
     src: "{{ atom.config.src }}{{ atom.config.filename }}"
     dest: "{{ atom.config.dest }}{{ atom.config.filename }}"

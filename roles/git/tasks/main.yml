@@ -5,7 +5,7 @@
     state: latest
 
 - name: Update submodules
-  command: "git submodule update --init"
+  shell: "git submodule update --recursive --remote"
 
 - name: Restore gitconfig
   copy:
