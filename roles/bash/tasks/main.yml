@@ -7,4 +7,6 @@
     mode: 0644
 
 - name: Reload bash_profile
-  shell: ". {{ bash.aliases.dest }}{{ bash.aliases.filename }}"
+  shell: "source {{ bash.aliases.dest }}{{ bash.aliases.filename }}"
+  args:
+    executable: /bin/bash
