@@ -4,7 +4,12 @@
     name: git
     state: latest
 
-- name: Update submodules
+- name: Init git submodules
+  become: yes
+  shell: "git submodule update --init"
+
+- name: Update git submodules
+  become: yes
   shell: "git submodule update --recursive --remote"
 
 - name: Restore gitconfig
