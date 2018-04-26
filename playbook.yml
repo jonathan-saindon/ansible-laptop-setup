@@ -14,9 +14,9 @@
   #   - shell: sudo apt-get dist-upgrade -y -v
 
   roles:
+    - role: git
     - role: bash
     - role: ssh
-    - role: git
     - role: python
     - role: apps
     - role: atom
